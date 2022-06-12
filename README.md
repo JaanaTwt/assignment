@@ -13,6 +13,6 @@
 - Metrics implementation for Monitoring
 - Proper functional responses for different error situations and also success cases
 
-The focus was mainly getting the core functionality ready given the timelines and it is a simple application that can be deployed to Prod. But If we had mroe time I would have atleast picked up the implementation on metric.
+The focus was mainly getting the core functionality ready given the timelines and it is a simple application that can be deployed to Prod. But If we had more time the above improvements will make the app more adaptable for Prodcution.
 
 
