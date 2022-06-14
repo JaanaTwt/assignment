@@ -115,7 +115,7 @@ public class ArticleResourceIT {
         when(articlesRepository.findById(1)).thenReturn(Optional.of(article));
         ResponseEntity<String> response = restTemplate.exchange("/articles/1", HttpMethod.PUT, new HttpEntity<>(article), String.class);
 
-        assertEquals(HttpStatus.CREATED, response.getStatusCode());
+        assertEquals(HttpStatus.NO_CONTENT, response.getStatusCode());
         verify(articlesRepository, times(1)).save(article);
     }
 }

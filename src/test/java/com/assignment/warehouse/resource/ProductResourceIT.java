@@ -163,7 +163,7 @@ public class ProductResourceIT {
 
         when(productsRepository.findById(1)).thenReturn(Optional.of(products));
         ResponseEntity<String> response = restTemplate.exchange("/products/1", HttpMethod.PUT, new HttpEntity<>(productMadeOf), String.class);
-        assertEquals(HttpStatus.CREATED, response.getStatusCode());
+        assertEquals(HttpStatus.NO_CONTENT, response.getStatusCode());
 
         when(productsRepository.findById(1)).thenReturn(Optional.empty());
         ResponseEntity<String> responseWithStatus400 = restTemplate.exchange("/products/1", HttpMethod.PUT, new HttpEntity<>(productMadeOf), String.class);
